@@ -1,6 +1,6 @@
-## API RestFull
+## API RestFul
 
-Está é minha primeira API RESTFull em JAVA, completa utilizando o Spring Boot, Spring Framework e Java.
+Está é minha primeira API RESTFul em JAVA, completa utilizando o Spring Boot, Spring Framework e Java.
 
 Toda ela foi construida seguindo o Modelo de Maturidade de Richardson.
 
