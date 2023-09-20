@@ -1,14 +1,37 @@
-version: '3.1'
+version: '3.4'
 services:
-  db:
+  app:
+    image: lucassimon98/springboot:1.0
+    container_name: springboot_api
+    links:
+      - mysqldb:mysql
+    networks:
+      - lucas-net
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysqldb
+  mysqldb:
     image: mysql
-    container_name: springboot-api
+    container_name: springboot_db
+    networks:
+      - lucas-net
+    restart: always
     environment:
+      MYSQL_DATABASE: spring_api
+      MYSQL_USER: lucas
+      MYSQL_PASSWORD: db123
       MYSQL_ROOT_PASSWORD: root
+
     ports:
       - "3306:3306"
+
     volumes:
       - javaapi_data:/var/lib/mysql
+
+networks:
+  lucas-net:
+    internal: true
 
 volumes:
   javaapi_data:
