@@ -5,17 +5,15 @@ services:
     container_name: springboot_api
     links:
       - mysqldb:mysql
-    networks:
-      - lucas-net
     ports:
       - "8080:8080"
+    expose:
+      - "8080"
     depends_on:
       - mysqldb
   mysqldb:
     image: mysql
     container_name: springboot_db
-    networks:
-      - lucas-net
     restart: always
     environment:
       MYSQL_DATABASE: spring_api
@@ -29,9 +27,7 @@ services:
     volumes:
       - javaapi_data:/var/lib/mysql
 
-networks:
-  lucas-net:
-    internal: true
+
 
 volumes:
   javaapi_data:
