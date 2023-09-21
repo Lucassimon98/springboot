@@ -20,3 +20,12 @@ Recursos:
 Testado através do Postman, onde tive meu primeiro contato com a ferramenta.
 
 Está é uma aula sobre Spring Boot do Canal Michelli Brito do Youtube.
+
+# Atualização
+
+Após a criação do projeto e finalização dele com os arquivos todos no GitHub foi feito a Containerização do Projeto no Docker
+
+Aqui deixo o Link do Repositório do Docker: https://hub.docker.com/repository/docker/lucassimon98/springboot/general
+
+Toda a implementação do Docker e do Banco de Dados foi feita através do Docker Compose
+Foi executado também os testes dentro do Docker e através do Postman com a aplicação já no Container.
