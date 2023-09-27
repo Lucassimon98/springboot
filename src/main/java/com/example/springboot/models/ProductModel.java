@@ -20,6 +20,15 @@ public class ProductModel extends RepresentationModel<ProductModel> implements S
     private String name;
     private BigDecimal value;
 
+    public ProductModel(String name, BigDecimal value) {
+        this.name = name;
+        this.value = value;
+    }
+
+    public ProductModel() {
+
+    }
+
     public UUID getIdProduct() {
         return idProduct;
     }
